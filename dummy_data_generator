@@ -1,0 +1,82 @@
+import random
+from faker import Faker
+from datetime import datetime
+import pandas as pd
+import time
+
+fake = Faker()
+
+# Set consistent IDs
+id = 0
+current_datetime = datetime.now()
+
+current_timestamp_str = current_datetime.strftime('%Y-%m-%d %H:%M:%S')
+parsed_timestamp = datetime.strptime(current_timestamp_str, '%Y-%m-%d %H:%M:%S')
+
+# Generate dummy data
+def generate_data():
+    global id
+    id += 1
+    data =[ {
+        'transactionn_id': random.randint(10000, 5000000),
+        'event_timestamp':  parsed_timestamp,
+        "property_id": id,
+        "home_type": random.choice(['apartment', 'house', 'condo']),
+        "bedroom": random.randint(1, 6),
+        "bathroom": random.randint(1, 5),
+        "living_area": random.randint(500, 7000),
+        "lot_area": random.uniform(500, 20000),
+        "lot_area_unit": random.choice(['sqft', 'acres']),
+        "is_non_owner_occupied": random.choice([True, False]),
+        "year_built": random.randint(1900, 2022),
+        "price": random.randint(50000, 2000000),
+        "price_for_HDP": random.randint(50000, 2000000),
+        "rent_zestimate": random.randint(500, 10000),
+        "zestimate": random.randint(50000, 2000000),
+        "tax_assessed_value": random.randint(5000, 80000),
+        "currency": random.choice(['USD', 'EUR', 'GBP', 'CAD']),
+        "sales_property_rent_id": id,
+        "location_id": id,
+        "rent_price": random.randint(500, 10000),
+        "rent_date": random.randint(0, 365),
+        "sales_property_sold_id": id,
+        "sale_price": random.randint(10000000, 300000000),
+        "sale_date": fake.date_time_this_decade().isoformat(),
+        "buyer_user_id": id,
+        "seller_user_id": id,
+        "user_id": id,
+        "user_name": fake.name(),
+        "current_user_name": "current_user",
+        "last_user": "last_user",
+        "owner": "owner",
+        "email": fake.email(),
+        "phone_number": fake.phone_number(),
+        "user_type": random.choice(['buyer', 'seller', 'agent']),
+        "registration_date": fake.date_time_this_decade().isoformat(),
+        "saved_perperties": random.randint(0, 100),
+        "listing_id": id,
+        "days_on_zillow": random.randint(1, 100),
+        "home_status": random.choice(['Active', 'Inactive', 'Sold']),
+        "Home_Status_for_HDP": random.choice(['Active', 'Inactive', 'Sold']),
+        "Is_Featured": random.choice([True, False]),
+        "Is_Pre_Foreclosure_Auction": random.choice([True, False]),
+        "Is_Premier_Builder": random.choice([True, False]),
+        "Is_Showcase_Listing": random.choice([True, False]),
+        "Should_Highlight": random.choice([True, False]),
+        "Image_Source": "https://example.com/image.jpg",
+        "city": fake.city(),
+        "country": fake.country(),
+        "zip_code": fake.zipcode(),
+        "address": fake.address(),
+        "state": fake.state(),
+        "longitude": "0.0",
+        "latitude": "0.0",
+        "date_id": id,
+        "date": random.randint(0, 365),
+        "day_of_week": random.choice(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']),
+        "month": random.randint(1, 12),
+        "year": random.randint(2000, 2023),
+        "quarter": random.randint(1, 4),
+        "holiday_indicator": random.choice([True, False])
+    }]
+    return data
