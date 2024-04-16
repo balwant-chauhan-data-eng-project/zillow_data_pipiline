@@ -1,15 +1,13 @@
-challenges i had faced during this projecct
+##### challenges i had faced during this projecct #####
 
-
-error
+ 
 coundn't establish the connection(while connecting with vs code with ec2)
 
 
 modulenotfound  error and import error  (importing zillow data to zillow_analytics.py)
 
 
- IsADirectoryError: [Errno 21] Is a directory: '/home/ubuntu/raw_data/raw_data_04/03/2024/04:51:26.json'
-
+  
 
 
 Broken DAG: [/home/ubuntu/airflow/dags/zillowanalytics.py] Traceback (most recent call last):
@@ -25,9 +23,12 @@ raise AirflowException(
 airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
 
 
-ClientError: An error occurred (IllegalLocationConstraintException) when calling the CopyObject operation: The ap-south-2 location constraint is incompatible for the region specific endpoint this request was sent to.
 
-LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+
+ 
+LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html  
+
+
  
 
 [ERROR] ClientError: An error occurred (IllegalLocationConstraintException) when calling the CopyObject operation: The ap-south-2 location constraint is incompatible for the region specific endpoint this request was sent to.
@@ -49,35 +50,6 @@ Traceback (most recent call last):
     Waiter.wait(self, **kwargs)
   File "/var/lang/lib/python3.12/site-packages/botocore/waiter.py", line 357, in wait
     raise WaiterError(
-
-
-
-
-([ERROR] ClientError: An error occurred (IllegalLocationConstraintException) when calling the CopyObject operation: The ap-south-2 location constraint is incompatible for the region specific endpoint this request was sent to.
-Traceback (most recent call last):
-  File "/var/task/lambda_function.py", line 20, in lambda_handler
-    s3_client.copy_object(
-  File "/var/lang/lib/python3.12/site-packages/botocore/client.py", line 553, in _api_call
-    return self._make_api_call(operation_name, kwargs)
-  File "/var/lang/lib/python3.12/site-packages/botocore/client.py", line 1009, in _make_api_call
-    raise error_class(parsed_response, operation_name))    i had solved by changing the bucket name
-
-
-
-
-[ERROR] Runtime.HandlerNotFound: Handler 'lambda_handler' missing on module 'lambda_function'
-Traceback (most recent call last):
-
-
-
- 
-  File "/home/ubuntu/.local/lib/python3.10/site-packages/redshift_connector/core.py", line 2194, in handle_messages
-    raise self.error
-redshift_connector.error.ProgrammingError: {'S': 'ERROR', 'C': 'XX000', 'M': "The specified S3 prefix 'transformed_data/04_09_2024.csv' does not exist", 'D': "\n  -----------------------------------------------\n  error:  The specified S3 prefix 'transformed_data/04_09_2024.csv' does not exist\n  code:      8001\n  context:   \n  query:     207132\n  location:  s3_utility.cpp:710\n  process:   padbmaster [pid=1073938615]\n  -----------------------------------------------\n", 'F': '../src/sys/xen_execute.cpp', 'L': '12414', 'R': 'pg_throw'}
-[2024-04-15, 15:39:53 UTC] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=zillow_analytics_dag, task_id=tsk_transfer_s3_to_redshift, execution_date=20240415T144219, start_date=20240415T153953, end_date=20240415T153953
-[2024-04-15, 15:39:53 UTC] {standard_task_runner.py:107} ERROR - Failed to execute job 451 for task tsk_transfer_s3_to_redshift ({'S': 'ERROR', 'C': 'XX000', 'M': "The specified S3 prefix 'transformed_data/04_09_2024.csv' does not exist", 'D': "\n  -----------------------------------------------\n  error:  The specified S3 prefix 'transformed_data/04_09_2024.csv' does not exist\n  code:      8001\n  context:   \n  query:     207132\n  location:  s3_utility.cpp:710\n  process:   padbmaster [pid=1073938615]\n  -----------------------------------------------\n", 'F': '../src/sys/xen_execute.cpp', 'L': '12414', 'R': 'pg_throw'}; 2859)
-[2024-04-15, 15:39:53 UTC] {local_task_job_runner.py:234} INFO - Task exited with return code 1
-[2024-04-15, 15:39:53 UTC] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
 
 
 
