@@ -28,7 +28,7 @@ task 1: extact_zilow_data_var (importing dummy data from zillow_data.py and crea
 
 
 
-task 2 : dumping data from ec2 local file to s3_raw_data using tack upload_to_s3
+task 2 : dumping data from ec2 local file to s3_raw_data  bucket using task upload_to_s3
 
 
 
