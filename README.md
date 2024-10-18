@@ -2,6 +2,11 @@
 
 ![_zillow_data_pipeline_project](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/assets/167126710/bfcbfdef-3222-4892-bc11-c56926c63798)
 
+![Screenshot 2024-04-15 225940](https://github.com/user-attachments/assets/1b76811b-a253-4e87-8089-95a546c65006)
+![Screenshot 2024-04-15 200605](https://github.com/user-attachments/assets/a87df9ba-2f3c-472b-9695-77f580e12cd2)
+![Screenshot 2024-04-15 200628](https://github.com/user-attachments/assets/d15d7d32-1627-49d8-9530-395b7d3cbd2a)
+![Screenshot 2024-04-15 225940](https://github.com/user-attachments/assets/d03142af-7cb9-40e2-9bf7-d4715705cdf7)
+
 
 step 1:
 sudo apt update
