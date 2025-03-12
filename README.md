@@ -1,9 +1,9 @@
 # Zillow Data Pipeline 🏡
 
-![Zillow Data Pipeline Project](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/assets/167126710/bfcbfdef-3222-4892-bc11-c56926c63798)
+![Zillow Data Pipeline Project](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
 
-![Screenshot 1](https://github.com/user-attachments/assets/d15d7d32-1627-49d8-9530-395b7d3cbd2a)
-![Screenshot 2](https://github.com/user-attachments/assets/d03142af-7cb9-40e2-9bf7-d4715705cdf7)
+![Screenshot 1](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
+![Screenshot 2](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
 
 ---
 
@@ -52,13 +52,13 @@
 ### Step 2: Connect VSCode with EC2 and Create DAG 🖥️
 1. **Connect to your EC2 instance using VSCode**.
 2. **Create a file inside the Airflow directory**:
-   - Name the file `dags.py`.
-3. **Write the code for `zilowanalytics.py`**:
+   - Name the file `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`.
+3. **Write the code for `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`**:
    - Define the tasks you will create.
 
 #### Task 1: Extract Zillow Data 📊
 - **Function**: `extract_zillow_data_var`
-- **Description**: Import dummy data from `zillow_data.py`, create a `raw_data` folder, and dump the raw data into that folder.
+- **Description**: Import dummy data from `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`, create a `raw_data` folder, and dump the raw data into that folder.
 
 #### Task 2: Upload Data to S3 ☁️
 - **Function**: `upload_to_s3`
@@ -80,7 +80,7 @@
 2. **Create a trigger**:  
    - Set it to activate on `put object` events in the `s3_staging_data` bucket.
 3. **Implement the Lambda function**:
-   - Paste the code from `lambda_transform.py` in the Lambda function to dump data into the `s3_transformed_data` bucket.
+   - Paste the code from `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2` in the Lambda function to dump data into the `s3_transformed_data` bucket.
 
 ---
 
